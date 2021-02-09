@@ -15,7 +15,7 @@ router.put("/signup",[
           }
         });
       }),
-    body("password").trim().isLength({min:1}),
+    body("password").trim().isLength({min:8}),
     body("name").not().isEmpty()
 ],authController.signup)
 
